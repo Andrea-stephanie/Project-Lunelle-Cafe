@@ -1,0 +1,323 @@
+/* =========================================================
+   LUNELLE CAFÉ - DESIGN SYSTEM & CUSTOM STYLES
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Color Palette */
+  --blush-pink: #F8DCE5;
+  --soft-pink: #F3C6D5;
+  --baby-pink: #FCEEF2;
+  --pure-white: #FFFFFF;
+  --milky-cream: #FFF8F3;
+  --latte-beige: #C8A98D;
+  --coffee-brown: #8B654A;
+  --dark-brown: #49352A;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Poppins', sans-serif;
+  --font-accent: 'Cormorant Garamond', serif;
+
+  /* UI Effects */
+  --shadow-soft: 0 8px 24px rgba(73, 53, 42, 0.06);
+  --shadow-hover: 0 14px 32px rgba(243, 198, 213, 0.45);
+  --radius-card: 20px;
+  --radius-pill: 50px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--milky-cream);
+  color: var(--dark-brown);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: var(--font-heading);
+  color: var(--dark-brown);
+  font-weight: 600;
+}
+
+.font-accent {
+  font-family: var(--font-accent);
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--coffee-brown);
+}
+
+/* Custom Backgrounds & Colors */
+.bg-blush { background-color: var(--blush-pink) !important; }
+.bg-soft-pink { background-color: var(--soft-pink) !important; }
+.bg-baby-pink { background-color: var(--baby-pink) !important; }
+.bg-milky-cream { background-color: var(--milky-cream) !important; }
+.text-coffee { color: var(--coffee-brown) !important; }
+.text-dark-brown { color: var(--dark-brown) !important; }
+
+/* Navigation Bar */
+.navbar-lunelle {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--blush-pink);
+  padding: 0.85rem 0;
+}
+
+.navbar-lunelle .navbar-brand {
+  font-size: 1.55rem;
+  color: var(--dark-brown);
+  letter-spacing: 0.5px;
+}
+
+.navbar-lunelle .nav-link {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: var(--coffee-brown);
+  padding: 0.5rem 1rem !important;
+  border-radius: var(--radius-pill);
+  transition: all 0.25s ease;
+}
+
+.navbar-lunelle .nav-link:hover,
+.navbar-lunelle .nav-link.active {
+  color: var(--dark-brown);
+  background-color: var(--baby-pink);
+}
+
+/* Custom Buttons */
+.btn-lunelle-primary {
+  background-color: var(--soft-pink);
+  color: var(--dark-brown);
+  border: 1.5px solid var(--soft-pink);
+  border-radius: var(--radius-pill);
+  padding: 0.65rem 1.6rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-lunelle-primary:hover {
+  background-color: var(--coffee-brown);
+  border-color: var(--coffee-brown);
+  color: var(--pure-white);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn-lunelle-outline {
+  background-color: transparent;
+  color: var(--dark-brown);
+  border: 1.5px solid var(--coffee-brown);
+  border-radius: var(--radius-pill);
+  padding: 0.65rem 1.6rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-lunelle-outline:hover {
+  background-color: var(--blush-pink);
+  border-color: var(--blush-pink);
+  color: var(--dark-brown);
+  transform: translateY(-2px);
+}
+
+.btn-cart-nav {
+  background-color: var(--baby-pink);
+  color: var(--dark-brown);
+  border: 1px solid var(--soft-pink);
+  border-radius: var(--radius-pill);
+  padding: 0.45rem 1rem;
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.btn-cart-nav:hover {
+  background-color: var(--soft-pink);
+  color: var(--dark-brown);
+}
+
+.badge-cart {
+  background-color: var(--coffee-brown);
+  color: var(--pure-white);
+  font-size: 0.75rem;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--baby-pink) 0%, var(--milky-cream) 60%, var(--blush-pink) 100%);
+  padding: 4.5rem 0;
+  border-bottom: 1px solid var(--blush-pink);
+}
+
+/* Fruit & Aesthetic Photo Placeholder Boxes (Easy to replace with <img>) */
+.photo-placeholder {
+  background: linear-gradient(145deg, var(--baby-pink) 0%, var(--blush-pink) 100%);
+  border: 2px dashed var(--latte-beige);
+  border-radius: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--coffee-brown);
+  transition: transform 0.3s ease;
+}
+
+.photo-placeholder:hover {
+  transform: scale(1.01);
+}
+
+.photo-placeholder .fruit-emoji {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  filter: drop-shadow(0 4px 8px rgba(73, 53, 42, 0.1));
+}
+
+.photo-placeholder .photo-label {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--dark-brown);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 0.25rem 0.85rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--soft-pink);
+}
+
+.photo-hero {
+  min-height: 360px;
+  border-width: 3px;
+}
+
+.photo-card-top {
+  height: 200px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 1.5px dashed var(--soft-pink);
+}
+
+.photo-reading {
+  height: 230px;
+}
+
+/* Coquette & Bookish Pill Badge */
+.pill-tag {
+  display: inline-block;
+  background-color: var(--pure-white);
+  color: var(--coffee-brown);
+  border: 1px solid var(--soft-pink);
+  border-radius: var(--radius-pill);
+  padding: 0.35rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+/* Cards */
+.card-lunelle {
+  background-color: var(--pure-white);
+  border: 1px solid var(--blush-pink);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-lunelle:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+
+.signature-badge {
+  background-color: var(--coffee-brown);
+  color: var(--pure-white);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: var(--radius-pill);
+  letter-spacing: 0.4px;
+}
+
+/* Reading Corner Box */
+.reading-corner-box {
+  background-color: var(--pure-white);
+  border: 1.5px dashed var(--latte-beige);
+  border-radius: 28px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.section-divider {
+  text-align: center;
+  color: var(--latte-beige);
+  letter-spacing: 6px;
+  font-size: 1.1rem;
+  margin: 1rem 0 2rem;
+}
+
+/* Subtle Fade-in Animation */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Back to Top Button */
+#backToTopBtn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--coffee-brown);
+  color: var(--pure-white);
+  border: none;
+  box-shadow: var(--shadow-soft);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1030;
+  transition: all 0.3s ease;
+}
+
+#backToTopBtn:hover {
+  background-color: var(--dark-brown);
+  transform: translateY(-3px);
+}
+
+/* Footer */
+.footer-lunelle {
+  background-color: var(--blush-pink);
+  color: var(--dark-brown);
+  border-top: 1px solid var(--soft-pink);
+}
+
+.footer-lunelle a {
+  color: var(--coffee-brown);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-lunelle a:hover {
+  color: var(--dark-brown);
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 3rem 0;
+  }
+  .photo-hero {
+    min-height: 260px;
+  }
+  .reading-corner-box {
+    padding: 1.5rem;
+  }
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu &amp; Cart — LUNELLE Café</title>
+  <!-- Bootstrap 5 CSS (Bisa diganti ke file lokal kamu: href="css/bootstrap.min.css") -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom LUNELLE CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR (Buka tab baru saat diklik) -->
+  <nav class="navbar navbar-expand-lg navbar-lunelle sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" target="_blank" rel="noopener noreferrer">
+        <img src="images/logo.png" alt="Logo LUNELLE Café" width="38" height="38" class="rounded-circle object-fit-cover">
+        <span> LUNELLE Café</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#lunelleNavbar" aria-controls="lunelleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="lunelleNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" target="_blank" rel="noopener noreferrer">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" target="_blank" rel="noopener noreferrer">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="events.html" target="_blank" rel="noopener noreferrer">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="community.html" target="_blank" rel="noopener noreferrer">Community</a>
+          </li>
+        </ul>
+
+        <div class="d-flex">
+          <a href="#cartSection" class="btn btn-cart-nav d-inline-flex align-items-center gap-2">
+            <i class="bi bi-bag-heart"></i>
+            <span>Cart</span>
+            <span class="badge rounded-pill badge-cart" id="navCartCount">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="hero-section py-5">
+    <div class="container text-center fade-in-up">
+      <span class="pill-tag">🍓 Handcrafted Sips &amp; Sweet Treats</span>
+      <h1 class="display-5 mb-2">Our Full Café Menu</h1>
+      <p class="font-accent mb-2">“27 pastel beverages, comforting coffees, and freshly baked pastries.”</p>
+      <p class="small text-muted mb-0">All pretty girls favourite drinks and pastries</p>
+    </div>
+  </header>
+
+  <!-- MENU CATALOG & SHOPPING CART SECTION -->
+  <main class="py-5">
+    <div class="container">
+      <!-- Category Filter Buttons -->
+      <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" id="categoryFilterBar" role="group" aria-label="Menu Category Filters">
+        <button type="button" class="btn btn-lunelle-primary active" data-category="All">All Menu (27)</button>
+        <button type="button" class="btn btn-lunelle-outline" data-category="Strawberry Series">🍓 Strawberry Series</button>
+        <button type="button" class="btn btn-lunelle-outline" data-category="Matcha Series">🍵 Matcha Series</button>
+        <button type="button" class="btn btn-lunelle-outline" data-category="Milky Fruit Series">🍌 Milky Fruit Series</button>
+        <button type="button" class="btn btn-lunelle-outline" data-category="Milkshake Series">🥤 Milkshake Series</button>
+        <button type="button" class="btn btn-lunelle-outline" data-category="Coffee Collection">☕ Coffee Collection</button>
+        <button type="button" class="btn btn-lunelle-outline" data-category="Bakery & Sweet Treats">🥐 Bakery &amp; Sweet Treats</button>
+      </div>
+
+      <div class="row g-4">
+        <!-- LEFT COLUMN: PRODUCT GRID (Rendered dynamically by js/cart.js) -->
+        <div class="col-lg-8">
+          <div class="d-flex justify-content-between align-items-center mb-3">
+            <h2 class="h4 mb-0" id="activeCategoryTitle">All Menu Items</h2>
+            <span class="small text-coffee" id="productCountLabel">Showing 27 items</span>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 g-4" id="menuProductGrid">
+            <!-- Product cards will be injected here via JavaScript -->
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: SHOPPING CART SIDEBAR (localStorage synchronized) -->
+        <div class="col-lg-4" id="cartSection">
+          <div class="card card-lunelle p-4 sticky-lg-top" style="top: 90px;">
+            <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+              <h2 class="h4 mb-0"><i class="bi bi-bag-heart me-2"></i>Your Cart</h2>
+              <button type="button" class="btn btn-sm btn-link text-danger text-decoration-none p-0" id="clearCartBtn" style="display: none;">
+                Clear All
+              </button>
+            </div>
+
+            <!-- Empty Cart State -->
+            <div id="emptyCartState" class="text-center py-4">
+              <div class="fs-1 mb-2">🧁</div>
+              <h3 class="h6">Your basket is still empty</h3>
+              <p class="small text-muted mb-0">Add a glass of Blushberry Matcha or a warm croissant to begin your cozy order!</p>
+            </div>
+
+            <!-- Cart Items List -->
+            <div id="cartItemsContainer" class="d-flex flex-column gap-3 mb-3" style="max-height: 360px; overflow-y: auto;">
+              <!-- Cart items rendered dynamically by js/cart.js -->
+            </div>
+
+            <!-- Cart Summary -->
+            <div id="cartSummaryBox" class="border-top pt-3" style="display: none;">
+              <div class="d-flex justify-content-between small text-coffee mb-1">
+                <span>Total Items</span>
+                <span id="cartTotalItems">0</span>
+              </div>
+              <div class="d-flex justify-content-between small text-coffee mb-2">
+                <span>Subtotal (Sample)</span>
+                <span id="cartSubtotal">IDR 0</span>
+              </div>
+              <div class="d-flex justify-content-between fw-semibold fs-5 text-dark-brown border-top pt-2 mb-3">
+                <span>Total</span>
+                <span id="cartGrandTotal">IDR 0</span>
+              </div>
+
+              <button type="button" class="btn btn-lunelle-primary w-100" id="checkoutBtn">
+                <i class="bi bi-sparkles me-1"></i> Your Checkout
+              </button>
+              <small class="d-block text-center text-muted mt-2" style="font-size: 0.75rem;">
+                Your order is saved, you can continue to order the other menu.
+              </small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- CHECKOUT SIMULATION MODAL -->
+  <div class="modal fade" id="checkoutModal" tabindex="-1" aria-labelledby="checkoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content rounded-4 border-0 shadow">
+        <div class="modal-header bg-baby-pink border-0">
+          <h2 class="modal-title h5" id="checkoutModalLabel">🎀 Orders are Confirmed!</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 text-center">
+          <div class="fs-1 mb-2">🍓✨</div>
+          <h3 class="h5 mb-2">Thank You for Visiting LUNELLE Café!</h3>
+          <p class="small text-coffee mb-3">
+            This is your order's checkout. Your sample order summary has been recorded!
+          </p>
+          <div class="p-3 rounded-4 bg-milky-cream text-start small mb-3" id="checkoutReceiptDetails">
+            <!-- Order summary details injected by JS -->
+          </div>
+          <button type="button" class="btn btn-lunelle-primary px-4" data-bs-dismiss="modal">Back to Café</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer-lunelle pt-5 pb-4 mt-4">
+    <div class="container">
+      <div class="row g-4 pb-4 border-bottom" style="border-color: var(--soft-pink) !important;">
+        <div class="col-lg-4">
+          <h3 class="h4 mb-2">🎀 LUNELLE Café</h3>
+          <p class="font-accent mb-2">“Un Café, Mille Rêves.”</p>
+          <p class="small text-coffee">
+            A cozy pastel book café serving homemade strawberry matcha, specialty coffee, and freshly baked sweet treats.
+          </p>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h4 class="h6 text-uppercase mb-3">Explore</h4>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html" target="_blank" rel="noopener noreferrer">Home</a></li>
+            <li><a href="about.html" target="_blank" rel="noopener noreferrer">About Us</a></li>
+            <li><a href="menu.html">Our Menu</a></li>
+            <li><a href="events.html" target="_blank" rel="noopener noreferrer">Events</a></li>
+            <li><a href="community.html" target="_blank" rel="noopener noreferrer">Community</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h4 class="h6 text-uppercase mb-3">Visit Us </h4>
+          <ul class="list-unstyled small text-coffee d-flex flex-column gap-2">
+            <li><i class="bi bi-geo-alt me-1"></i> Jl. Melati Pastel No. 18, Manado</li>
+            <li><i class="bi bi-clock me-1"></i> Mon – Fri: 08:00 – 18:30 WITA</li>
+            <li><i class="bi bi-envelope me-1"></i> hello@lunellecafe.example</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h4 class="h6 text-uppercase mb-3">Follow Our Story</h4>
+          <div class="d-flex gap-2 mb-3">
+            <a href="#" class="btn btn-sm btn-light rounded-circle" aria-label="Instagram Placeholder"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="btn btn-sm btn-light rounded-circle" aria-label="TikTok Placeholder"><i class="bi bi-tiktok"></i></a>
+            <a href="#" class="btn btn-sm btn-light rounded-circle" aria-label="Pinterest Placeholder"><i class="bi bi-pinterest"></i></a>
+          </div>
+          <small class="text-coffee d-block">Tag <strong>#LunelleReadingCorner</strong> to share your cozy moments.</small>
+        </div>
+      </div>
+
+      <div class="pt-3 d-flex flex-wrap justify-content-between align-items-center small text-coffee">
+        <span>&copy; 2026 LUNELLE Café. All rights reserved.</span>
+        <span>Universitas Klabat Web Design Final Project</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" title="Back to top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS Bundle (Bisa diganti ke file lokal kamu: src="js/bootstrap.bundle.min.js") -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

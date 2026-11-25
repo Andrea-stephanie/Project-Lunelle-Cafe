@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Events &amp; Workshops — LUNELLE Café</title>
+  <!-- Bootstrap 5 CSS (Bisa diganti ke file lokal kamu: href="css/bootstrap.min.css") -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom LUNELLE CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR (Buka tab baru saat diklik) -->
+  <nav class="navbar navbar-expand-lg navbar-lunelle sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" target="_blank" rel="noopener noreferrer">
+        <img src="images/logo.png" alt="Logo LUNELLE Café" width="38" height="38" class="rounded-circle object-fit-cover">
+        <span> LUNELLE Café</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#lunelleNavbar" aria-controls="lunelleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="lunelleNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" target="_blank" rel="noopener noreferrer">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html" target="_blank" rel="noopener noreferrer">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html" target="_blank" rel="noopener noreferrer">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="events.html">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="community.html" target="_blank" rel="noopener noreferrer">Community</a>
+          </li>
+        </ul>
+
+        <div class="d-flex">
+          <a href="menu.html#cartSection" target="_blank" rel="noopener noreferrer" class="btn btn-cart-nav d-inline-flex align-items-center gap-2">
+            <i class="bi bi-bag-heart"></i>
+            <span>Cart</span>
+            <span class="badge rounded-pill badge-cart" id="navCartCount">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="hero-section py-5">
+    <div class="container text-center fade-in-up">
+      <span class="pill-tag">🗓️ Gather, Sip &amp; Create</span>
+      <h1 class="display-5 mb-2">LUNELLE Events &amp; Workshops</h1>
+      <p class="font-accent mb-0">“Intimate bookish circles, matcha crafting, and creative afternoons.”</p>
+    </div>
+  </header>
+
+  <!-- EVENTS LISTING SECTION -->
+  <section class="py-5">
+    <div class="container">
+      <div class="text-center mb-5 fade-in-up">
+        <h2 class="h1 mb-2">Upcoming Café Gatherings</h2>
+        <p class="text-coffee">Select any event below to reserve your seat through our online registration form.</p>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 g-4 fade-in-up">
+        <!-- Event 1: Lunelle Book Club -->
+        <div class="col">
+          <div class="card card-lunelle h-100">
+            <div class="photo-placeholder photo-card-top" role="img" aria-label="Placeholder foto Lunelle Book Club">
+              <img src="images/reading-books.jpg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Book Club">
+            </div>
+            <div class="card-body d-flex flex-column p-4">
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="badge rounded-pill bg-blush text-dark-brown"><i class="bi bi-calendar-event me-1"></i>Fri, 27 Nov 2026</span>
+                <span class="badge rounded-pill bg-baby-pink text-coffee"><i class="bi bi-clock me-1"></i>10:00 – 12:00 WITA</span>
+              </div>
+              <h3 class="h4 card-title">Lunelle Book Club</h3>
+              <p class="small text-muted mb-2"><i class="bi bi-geo-alt me-1"></i>The Lunelle Reading Corner</p>
+              <p class="card-text text-coffee small flex-grow-1">
+                A small gathering for fictional book lovers. Bring your current romance or fantasy read, swap annotated quotes, and enjoy warm chamomile tea and pastries together.
+              </p>
+              <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                <span class="small fw-medium text-coffee">Max 12 Participants</span>
+                <button type="button" class="btn btn-sm btn-lunelle-primary select-event-btn" data-event="Lunelle Book Club">
+                  Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 2: Strawberry Matcha Workshop -->
+        <div class="col">
+          <div class="card card-lunelle h-100">
+            <div class="photo-placeholder photo-card-top" role="img" aria-label="Placeholder foto Strawberry Matcha Workshop">
+              <img src="images/little-matcha-moment.jpg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Matcha Workshop">
+            </div>
+            <div class="card-body d-flex flex-column p-4">
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="badge rounded-pill bg-blush text-dark-brown"><i class="bi bi-calendar-event me-1"></i>Tue, 01 Dec 2026</span>
+                <span class="badge rounded-pill bg-baby-pink text-coffee"><i class="bi bi-clock me-1"></i>14:00 – 16:00 WITA</span>
+              </div>
+              <h3 class="h4 card-title">Strawberry Matcha Workshop</h3>
+              <p class="small text-muted mb-2"><i class="bi bi-geo-alt me-1"></i>LUNELLE Slow Bar Area</p>
+              <p class="card-text text-coffee small flex-grow-1">
+                A fun hands-on session about creating strawberry matcha drinks. Learn bamboo whisking techniques, sweet berry compote ratios, and pastel aesthetic plating.
+              </p>
+              <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                <span class="small fw-medium text-coffee">Includes Tasting Set</span>
+                <button type="button" class="btn btn-sm btn-lunelle-primary select-event-btn" data-event="Strawberry Matcha Workshop">
+                  Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 3: Coffee Brewing Class -->
+        <div class="col">
+          <div class="card card-lunelle h-100">
+            <div class="photo-placeholder photo-card-top" role="img" aria-label="Placeholder foto Coffee Brewing Class">
+              <img src="images/golden-hour-latte.jpg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Coffe class">
+            </div>
+            <div class="card-body d-flex flex-column p-4">
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="badge rounded-pill bg-blush text-dark-brown"><i class="bi bi-calendar-event me-1"></i>Thu, 03 Dec 2026</span>
+                <span class="badge rounded-pill bg-baby-pink text-coffee"><i class="bi bi-clock me-1"></i>15:30 – 17:00 WITA</span>
+              </div>
+              <h3 class="h4 card-title">Coffee Brewing Class</h3>
+              <p class="small text-muted mb-2"><i class="bi bi-geo-alt me-1"></i>LUNELLE Brew Station</p>
+              <p class="card-text text-coffee small flex-grow-1">
+                Learn the basics of coffee brewing—from understanding grind sizes and water temperature to pouring a smooth V60 and crafting silky latte milk foam.
+              </p>
+              <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                <span class="small fw-medium text-coffee">Beginner Friendly</span>
+                <button type="button" class="btn btn-sm btn-lunelle-primary select-event-btn" data-event="Coffee Brewing Class">
+                  Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event 4: Cozy Creative Afternoon -->
+        <div class="col">
+          <div class="card card-lunelle h-100">
+            <div class="photo-placeholder photo-card-top" role="img" aria-label="Placeholder foto Cozy Creative Afternoon">
+              <img src="images/cafe-atmosphere.jpg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Cozy Creative Afternoon">
+            </div>
+            <div class="card-body d-flex flex-column p-4">
+              <div class="d-flex flex-wrap gap-2 mb-2">
+                <span class="badge rounded-pill bg-blush text-dark-brown"><i class="bi bi-calendar-event me-1"></i>Wed, 02 Dec 2026</span>
+                <span class="badge rounded-pill bg-baby-pink text-coffee"><i class="bi bi-clock me-1"></i>15:30 – 17:30 WITA</span>
+              </div>
+              <h3 class="h4 card-title">Cozy Creative Afternoon</h3>
+              <p class="small text-muted mb-2"><i class="bi bi-geo-alt me-1"></i>Main Pastel Lounge</p>
+              <p class="card-text text-coffee small flex-grow-1">
+                A creative gathering for people who enjoy art, journaling, scrapbooking, and meaningful conversations in a gentle, pressure-free atmosphere.
+              </p>
+              <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
+                <span class="small fw-medium text-coffee">Stationery &amp; Stickers Provided</span>
+                <button type="button" class="btn btn-sm btn-lunelle-primary select-event-btn" data-event="Cozy Creative Afternoon">
+                  Register Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVENT REGISTRATION FORM & SAVED HISTORY -->
+  <section class="py-5 bg-baby-pink border-top" id="registrationSection" style="border-color: var(--blush-pink) !important;">
+    <div class="container py-2">
+      <div class="row g-5">
+        <!-- Registration Form -->
+        <div class="col-lg-7">
+          <div class="card card-lunelle p-4 p-lg-5">
+            <span class="pill-tag bg-baby-pink">💌 Reserve Your Spot</span>
+            <h2 class="h2 mb-2">Event Registration Form</h2>
+            <p class="small text-coffee mb-4">
+              Fill out the form below to register for an event. Your confirmation details will be saved when you submit the form.
+            </p>
+
+            <!-- Alert Validation Message -->
+            <div id="formAlertBox" class="alert rounded-4 d-none" role="alert"></div>
+
+            <form id="eventRegistrationForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="regFullName" class="form-label small fw-medium">Full Name <span class="text-danger">*</span></label>
+                  <input type="text" class="form-control rounded-4" id="regFullName" placeholder="e.g., Andrea Stephanie" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="regEmail" class="form-label small fw-medium">Email Address <span class="text-danger">*</span></label>
+                  <input type="email" class="form-control rounded-4" id="regEmail" placeholder="e.g., name@example.com" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="regPhone" class="form-label small fw-medium">Phone Number <span class="text-danger">*</span></label>
+                  <input type="tel" class="form-control rounded-4" id="regPhone" placeholder="e.g., 0812-3456-7890" required>
+                </div>
+
+                <div class="col-md-6">
+                  <label for="regParticipants" class="form-label small fw-medium">Number of Participants <span class="text-danger">*</span></label>
+                  <input type="number" class="form-control rounded-4" id="regParticipants" min="1" max="10" value="1" required>
+                </div>
+
+                <div class="col-12">
+                  <label for="regEventSelect" class="form-label small fw-medium">Select Event <span class="text-danger">*</span></label>
+                  <select class="form-select rounded-4" id="regEventSelect" required>
+                    <option value="">-- Choose a LUNELLE Event --</option>
+                    <option value="Lunelle Book Club">Lunelle Book Club (28 Nov 2026)</option>
+                    <option value="Strawberry Matcha Workshop">Strawberry Matcha Workshop (06 Dec 2026)</option>
+                    <option value="Coffee Brewing Class">Coffee Brewing Class (09 Dec 2026)</option>
+                    <option value="Cozy Creative Afternoon">Cozy Creative Afternoon (12 Dec 2026)</option>
+                  </select>
+                </div>
+
+                <div class="col-12">
+                  <label for="regMessage" class="form-label small fw-medium">Additional Message <span class="text-muted">(Optional)</span></label>
+                  <textarea class="form-control rounded-4" id="regMessage" rows="3" placeholder="Any dietary notes, favourite book genres, or questions?"></textarea>
+                </div>
+
+                <div class="col-12 pt-2">
+                  <button type="submit" class="btn btn-lunelle-primary w-100">
+                    <i class="bi bi-check2-circle me-1"></i> Submit Registration
+                  </button>
+                </div>
+              </div>
+            </form>
+
+            <!-- Confirmation Card Shown After Successful Submission -->
+            <div id="registrationConfirmationCard" class="mt-4 p-4 rounded-4 bg-milky-cream border border-2 d-none" style="border-color: var(--soft-pink) !important;">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="fs-4">🎀</span>
+                <h3 class="h5 mb-0 text-dark-brown">Registration Confirmed</h3>
+              </div>
+              <p class="small text-coffee mb-3">
+                Thank you for registering! Your registration has been saved. 
+              </p>
+              <div id="latestRegistrationSummary" class="small text-dark-brown">
+                <!-- Summary injected by js/events.js -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Saved Registration History (from localStorage) -->
+        <div class="col-lg-5">
+          <div class="card card-lunelle p-4 h-100">
+            <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-3">
+              <div>
+                <h3 class="h5 mb-0">Your Saved Registrations</h3>
+                <small class="text-muted">Choose your events</small>
+              </div>
+              <button type="button" class="btn btn-sm btn-outline-danger rounded-pill" id="clearRegistrationsBtn" style="display: none;">
+                Clear
+              </button>
+            </div>
+
+            <div id="registrationHistoryList" class="d-flex flex-column gap-3" style="max-height: 460px; overflow-y: auto;">
+              <!-- Saved registration cards rendered by js/events.js -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-lunelle pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4 pb-4 border-bottom" style="border-color: var(--soft-pink) !important;">
+        <div class="col-lg-4">
+          <h3 class="h4 mb-2">🎀 LUNELLE Café</h3>
+          <p class="font-accent mb-2">“Un Café, Mille Rêves.”</p>
+          <p class="small text-coffee">
+            A cozy pastel book café serving homemade strawberry matcha, specialty coffee, and freshly baked sweet treats.
+          </p>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h4 class="h6 text-uppercase mb-3">Explore</h4>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html" target="_blank" rel="noopener noreferrer">Home</a></li>
+            <li><a href="about.html" target="_blank" rel="noopener noreferrer">About Us</a></li>
+            <li><a href="menu.html" target="_blank" rel="noopener noreferrer">Our Menu</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="community.html" target="_blank" rel="noopener noreferrer">Community</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h4 class="h6 text-uppercase mb-3">Visit Us</h4>
+          <ul class="list-unstyled small text-coffee d-flex flex-column gap-2">
+            <li><i class="bi bi-geo-alt me-1"></i> Jl. Melati Pastel No. 18, Manado</li>
+            <li><i class="bi bi-clock me-1"></i> Mon – Fri: 08:00 – 18:30 WITA</li>
+            <li><i class="bi bi-envelope me-1"></i> hello@lunellecafe.example</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h4 class="h6 text-uppercase mb-3">Follow Our Story</h4>
+          <div class="d-flex gap-2 mb-3">
+            <a href="#" class="btn btn-sm btn-light rounded-circle" aria-label="Instagram Placeholder"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="btn btn-sm btn-light rounded-circle" aria-label="TikTok Placeholder"><i class="bi bi-tiktok"></i></a>
+            <a href="#" class="btn btn-sm btn-light rounded-circle" aria-label="Pinterest Placeholder"><i class="bi bi-pinterest"></i></a>
+          </div>
+          <small class="text-coffee d-block">Tag <strong>#LunelleReadingCorner</strong> to share your cozy moments.</small>
+        </div>
+      </div>
+
+      <div class="pt-3 d-flex flex-wrap justify-content-between align-items-center small text-coffee">
+        <span>&copy; 2026 LUNELLE Café. All rights reserved.</span>
+        <span>Universitas Klabat Web Design Final Project</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" title="Back to top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS Bundle (Bisa diganti ke file lokal kamu: src="js/bootstrap.bundle.min.js") -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/events.js"></script>
+</body>
+</html>

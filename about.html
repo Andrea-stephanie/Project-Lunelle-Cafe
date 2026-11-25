@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us &amp; Founder Portfolio — LUNELLE Café</title>
+  <!-- Bootstrap 5 CSS (Bisa diganti ke file lokal kamu: href="css/bootstrap.min.css") -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <!-- Custom LUNELLE CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION BAR (Buka tab baru saat diklik) -->
+  <nav class="navbar navbar-expand-lg navbar-lunelle sticky-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html" target="_blank" rel="noopener noreferrer">
+        <img src="images/logo.png" alt="Logo LUNELLE Café" width="38" height="38" class="rounded-circle object-fit-cover">
+        <span> LUNELLE Café</span>
+      </a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#lunelleNavbar" aria-controls="lunelleNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="lunelleNavbar">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-1">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html" target="_blank" rel="noopener noreferrer">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="menu.html" target="_blank" rel="noopener noreferrer">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="events.html" target="_blank" rel="noopener noreferrer">Events</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="community.html" target="_blank" rel="noopener noreferrer">Community</a>
+          </li>
+        </ul>
+
+        <div class="d-flex">
+          <a href="menu.html#cartSection" target="_blank" rel="noopener noreferrer" class="btn btn-cart-nav d-inline-flex align-items-center gap-2">
+            <i class="bi bi-bag-heart"></i>
+            <span>Cart</span>
+            <span class="badge rounded-pill badge-cart" id="navCartCount">0</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <header class="hero-section py-5">
+    <div class="container text-center fade-in-up">
+      <span class="pill-tag">📖 Our Story &amp; Creator</span>
+      <h1 class="display-5 mb-3">Un Café, Mille Rêves.</h1>
+      <p class="font-accent mb-0">“One Café, A Thousand Dreams.”</p>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       SECTION A: ABOUT LUNELLE CAFÉ (LOCAL UMKM PROFILE)
+       ========================================================= -->
+  <section class="py-5">
+    <div class="container">
+      <!-- Brand Story -->
+      <div class="row align-items-center g-5 mb-5 fade-in-up">
+        <div class="col-lg-6">
+          <div class="photo-placeholder photo-hero shadow-sm" role="img" aria-label="Placeholder foto cerita LUNELLE Café">
+            <div class="fruit-emoji">🍓📖🌸</div>
+            <p class="mb-2 fw-medium text-dark-brown">Brand Story Photo</p>
+            <img src="images/about-story.jpg" class="card-img-top" style="height: 450px; object-fit: cover;" alt="Brand Story Photo Area">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <span class="pill-tag">🌸 Brand Story &amp; History</span>
+          <h2 class="h1 mb-3">How LUNELLE Café Began</h2>
+          <blockquote class="p-4 rounded-4 bg-baby-pink border-start border-4 mb-4" style="border-color: var(--coffee-brown) !important;">
+            <p class="font-accent mb-0 text-dark-brown">
+              “Somewhere between the pages of a favourite novel and a glass of strawberry matcha, there is a little place called LUNELLE Café. Created by a girl who finds happiness in quiet mornings, fictional stories, pretty little things, and meaningful conversations. LUNELLE is a cozy little escape for everyone. Whether you come here to read your favourite book, enjoy a cup of matcha, spend time with someone special, or simply have a moment to yourself, there's always a little space for you.”
+            </p>
+          </blockquote>
+          <p class="text-coffee">
+            <strong>Why It Was Established:</strong> Started as a passionate local UMKM concept in 2026, LUNELLE Café was created to fill a gentle need—a café that isn't loud or rushed, where introverts feel completely at ease sitting alone with a novel, while close friends can still share laughter over sweet desserts.
+          </p>
+        </div>
+      </div>
+
+      <!-- Vision & Mission -->
+      <div class="row g-4 mb-5 fade-in-up">
+        <div class="col-md-6">
+          <div class="card card-lunelle h-100 p-4">
+            <div class="card-body">
+              <span class="pill-tag bg-baby-pink">✨ Our Vision</span>
+              <h3 class="h4 mb-3">A Sanctuary for Quiet Joy &amp; Creativity</h3>
+              <p class="text-coffee mb-0">
+                To become the most beloved pastel book café and local creative sanctuary where every cup, pastry, and book shelf inspires calm mornings, meaningful friendships, and everyday storytelling.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="card card-lunelle h-100 p-4">
+            <div class="card-body">
+              <span class="pill-tag bg-baby-pink">🎀 Our Mission</span>
+              <h3 class="h4 mb-3">Crafted with Care &amp; Soft Details</h3>
+              <ul class="text-coffee mb-0 ps-3">
+                <li class="mb-2">Serve homemade strawberry matcha, specialty coffee, and freshly baked pastries using quality local ingredients.</li>
+                <li class="mb-2">Provide a peaceful, aesthetic reading and study space through <em>The Lunelle Reading Corner</em>.</li>
+                <li>Support student creativity, book clubs, and local community gatherings.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Values & Unique Selling Points -->
+      <div class="text-center mb-4 fade-in-up">
+        <span class="pill-tag">🌷 What Makes Us Special</span>
+        <h2 class="h2">Core Values &amp; Unique Experience</h2>
+      </div>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mb-5 fade-in-up">
+        <div class="col">
+          <div class="card card-lunelle h-100 p-3 text-center">
+            <div class="card-body">
+              <div class="fs-2 mb-2">📚</div>
+              <h4 class="h6">Bookish Sanctuary</h4>
+              <p class="small text-coffee mb-0">Free curated romance, fantasy, and comforting fiction shelf with ribbon bookmarks.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-lunelle h-100 p-3 text-center">
+            <div class="card-body">
+              <div class="fs-2 mb-2">🍓</div>
+              <h4 class="h6">Signature Strawberry Matcha</h4>
+              <p class="small text-coffee mb-0">Homemade berry compote paired with authentic whisked matcha.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-lunelle h-100 p-3 text-center">
+            <div class="card-body">
+              <div class="fs-2 mb-2">🤍</div>
+              <h4 class="h6">Introvert-Friendly Comfort</h4>
+              <p class="small text-coffee mb-0">Cozy solo window seats alongside warm corners for intimate conversations.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-lunelle h-100 p-3 text-center">
+            <div class="card-body">
+              <div class="fs-2 mb-2">🎀</div>
+              <h4 class="h6">Thoughtful Coquette Aesthetics</h4>
+              <p class="small text-coffee mb-0">Blush pink, milky cream, and warm latte tones crafted down to the smallest ribbon.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Café Atmosphere, Location & Opening Hours -->
+      <div class="reading-corner-box fade-in-up">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <h3 class="h3 mb-3">Café Atmosphere &amp; Visit Information</h3>
+            <p class="text-coffee mb-3">
+              Step inside to soft sunlight filtering through sheer cream curtains, gentle piano melodies, the aroma of toasted butter croissants, and shelves lined with pastel-spined books. Whether you are finishing a university assignment or unwinding with a fantasy novel, you belong here.
+            </p>
+            <div class="row g-3 small text-coffee">
+              <div class="col-sm-6">
+                <div class="p-3 rounded-4 bg-baby-pink">
+                  <strong class="d-block text-dark-brown mb-1"><i class="bi bi-geo-alt-fill me-1"></i> Location (Sample)</strong>
+                  Jl. Melati Pastel No. 18, Sario, Manado, Sulawesi Utara
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="p-3 rounded-4 bg-baby-pink">
+                  <strong class="d-block text-dark-brown mb-1"><i class="bi bi-clock-fill me-1"></i> Opening Hours (Sample)</strong>
+                  Mon – Fri: 08:00 – 18:30 WITA<br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="photo-placeholder photo-reading" role="img" aria-label="Placeholder foto suasana café">
+              <div class="fruit-emoji">☕🥐🕯️</div>
+              <p class="small mb-1 fw-medium text-dark-brown">Café Atmosphere Photo</p>
+              <img src="images/cafe-atmosphere.jpg" class="card-img-top" style="height: 150px; object-fit: cover; border-radius: 1.2rem;" alt="Café Atmosphere Photo">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION B: FOUNDER PROFILE / PERSONAL PORTFOLIO
+       ========================================================= -->
+  <section class="py-5 bg-baby-pink border-top" style="border-color: var(--blush-pink) !important;">
+    <div class="container py-2">
+      <div class="text-center mb-5 fade-in-up">
+        <span class="pill-tag">👩‍💻 Personal Portfolio</span>
+        <h2 class="h1 mb-2">The Girl Behind LUNELLE</h2>
+        <p class="text-coffee">Where personal personality meets a cozy design &amp; brand storytelling.</p>
+      </div>
+
+      <div class="card card-lunelle p-4 p-lg-5 fade-in-up">
+        <div class="row g-4 align-items-start">
+          <!-- Left Column: Profile Photo Placeholder & Contact -->
+          <div class="col-lg-4 text-center">
+            <div class="photo-placeholder mx-auto mb-3 rounded-circle" style="width: 210px; height: 210px;" role="img" aria-label="Placeholder foto profil founder">
+              <div class="fruit-emoji" style="font-size: 3.3rem;">🎀👩🏻‍💻</div>
+              <img src="images/founder.jpg" class="card-img-top" style="height: 178px; object-fit: cover; border-radius: 30%;" alt="Founder Profile Photo">
+            </div>
+            <span class="badge rounded-pill bg-blush text-dark-brown mb-2">Founder &amp; Web Designer</span>
+            <h3 class="h4 mb-1">Andrea Stephanie</h3>
+            <p class="font-accent mb-3">Fictional story Lover • Pastel Dreamer • Learning to code</p>
+
+            <div class="p-3 rounded-4 bg-milky-cream text-start small text-coffee">
+              <strong class="d-block text-dark-brown mb-2">Contact Information </strong>
+              <p class="mb-1"><i class="bi bi-envelope me-2"></i>stephanieandrea14@gmail.com</p>
+              <p class="mb-1"><i class="bi bi-github me-2"></i>Andrea-stephanie</p>
+              <p class="mb-0"><i class="bi bi-instagram me-2"></i>@stephaniesolomon27</p>
+            </div>
+          </div>
+
+          <!-- Right Column: Bio, Education, Skills, Experience & Projects -->
+          <div class="col-lg-8">
+            <div class="mb-4">
+              <h4 class="h5 text-dark-brown border-bottom pb-2">Short Biography</h4>
+              <p class="text-coffee mb-0">
+                Hello! I am <strong>Andrea Stephanie</strong>, an undergraduate student passionate about web design, UI/UX design, and cozy brand storytelling. Just like LUNELLE Café, I tend to be quiet and observant at first, yet deeply expressive and playful when creating visual worlds, designing pastel interfaces, or talking about favourite fiction novels over strawberry matcha.
+              </p>
+            </div>
+
+            <div class="row g-4 mb-4">
+              <div class="col-md-6">
+                <h4 class="h5 text-dark-brown border-bottom pb-2">Educational Background</h4>
+                <ul class="list-unstyled small text-coffee mb-0">
+                  <li class="mb-2">
+                    <strong class="text-dark-brown d-block">Universitas Klabat</strong>
+                    Computer Science / System Information • 2025 – Present
+                  </li>
+                  <li>
+                    <strong class="text-dark-brown d-block">SMA UNKLAB AIRMADIDI</strong>
+                    2022-2025
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-md-6">
+                <h4 class="h5 text-dark-brown border-bottom pb-2">Skills &amp; Tools</h4>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge rounded-pill bg-blush text-dark-brown fw-normal px-3 py-2">Database &amp; Management</span>
+                  <span class="badge rounded-pill bg-blush text-dark-brown fw-normal px-3 py-2">Front-End &amp; Python, HTML, CSS, JS </span>
+                  <span class="badge rounded-pill bg-blush text-dark-brown fw-normal px-3 py-2">Teamwork</span>
+                  <span class="badge rounded-pill bg-blush text-dark-brown fw-normal px-3 py-2">Event Planning</span>
+                  <span class="badge rounded-pill bg-blush text-dark-brown fw-normal px-3 py-2">Web Design</span>
+                  <span class="badge rounded-pill bg-blush text-dark-brown fw-normal px-3 py-2">Event Coordination</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="row g-4">
+              <div class="col-md-6">
+                <h4 class="h5 text-dark-brown border-bottom pb-2">Experience </h4>
+                <ul class="list-unstyled small text-coffee mb-0">
+                  <li class="mb-2">
+                    <strong class="text-dark-brown d-block">UVICS Internal Development</strong>
+                    Assisted in organising internal development network connection • 2026
+                  </li>
+                  <li>
+                    <strong class="text-dark-brown d-block">Vending Machine Project</strong>
+                    Collaborated with teamwork using Python language • 2026
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-md-6">
+                <h4 class="h5 text-dark-brown border-bottom pb-2">Selected Projects</h4>
+                <ul class="list-unstyled small text-coffee mb-0">
+                  <li class="mb-2">
+                    <strong class="text-dark-brown d-block">LUNELLE Café Multi-Page Website</strong>
+                    Complete 5-page café, community, event, and localStorage cart web app.
+                  </li>
+                  <li>
+                    <strong class="text-dark-brown d-block">Basic Network Configuration</strong>
+                    Tested network connectivity and configuration.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer-lunelle pt-5 pb-4">
+    <div class="container">
+      <div class="row g-4 pb-4 border-bottom" style="border-color: var(--soft-pink) !important;">
+        <div class="col-lg-4">
+          <h3 class="h4 mb-2">🎀 LUNELLE Café</h3>
+          <p class="font-accent mb-2">“Un Café, Mille Rêves.”</p>
+          <p class="small text-coffee">
+            A cozy pastel book café serving homemade strawberry matcha, specialty coffee, and freshly baked sweet treats.
+          </p>
+        </div>
+
+        <div class="col-6 col-lg-2">
+          <h4 class="h6 text-uppercase mb-3">Explore</h4>
+          <ul class="list-unstyled small d-flex flex-column gap-2">
+            <li><a href="index.html" target="_blank" rel="noopener noreferrer">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="menu.html" target="_blank" rel="noopener noreferrer">Our Menu</a></li>
+            <li><a href="events.html" target="_blank" rel="noopener noreferrer">Events</a></li>
+            <li><a href="community.html" target="_blank" rel="noopener noreferrer">Community</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-lg-3">
+          <h4 class="h6 text-uppercase mb-3">Visit Us </h4>
+          <ul class="list-unstyled small text-coffee d-flex flex-column gap-2">
+            <li><i class="bi bi-geo-alt me-1"></i> Jl. Melati Pastel No. 18, Manado</li>
+            <li><i class="bi bi-clock me-1"></i> Mon – Fri: 08:00 – 18:30 WITA</li>
+            <li><i class="bi bi-envelope me-1"></i> hello@lunellecafe.example</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3">
+          <h4 class="h6 text-uppercase mb-3">Follow Our Story</h4>
+          <div class="d-flex gap-2 mb-3">
+            <a href="#" class="btn btn-sm btn-light rounded-circle" aria-label="Instagram Placeholder"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="btn btn-sm btn-light rounded-circle" aria-label="TikTok Placeholder"><i class="bi bi-tiktok"></i></a>
+            <a href="#" class="btn btn-sm btn-light rounded-circle" aria-label="Pinterest Placeholder"><i class="bi bi-pinterest"></i></a>
+          </div>
+          <small class="text-coffee d-block">Tag <strong>#LunelleReadingCorner</strong> to share your cozy moments.</small>
+        </div>
+      </div>
+
+      <div class="pt-3 d-flex flex-wrap justify-content-between align-items-center small text-coffee">
+        <span>&copy; 2026 LUNELLE Café. All rights reserved.</span>
+        <span>Universitas Klabat Web Design Final Project</span>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTopBtn" title="Back to top" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap 5 JS Bundle (Bisa diganti ke file lokal kamu: src="js/bootstrap.bundle.min.js") -->
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>
